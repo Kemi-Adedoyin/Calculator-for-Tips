@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --Green400: hsl(172, 67%, 45%);
+    --Green900: hsl(183, 100%, 15%);
+    --Grey500: hsl(186, 14%, 43%);
+    --Grey400: hsl(184, 14%, 56%);
+    --Grey200: hsl(185, 41%, 84%);
+    --Grey50: hsl(189, 47%, 97%);
+    --White: hsl(0, 100%, 100%);
+}
+body {
+    background-color: var(--Grey200);
+    font-family: "Lexend Deca";
+    /* display: flex;
+    justify-content: center; */
+}
+.logo {
+    margin: 2% 48%;
+    height: 30px;
+}
+.container {
+    background-color: var(--White);
+    border-radius: 10px;
+    display: flex;
+    /* gap: 90px; */
+    position: relative;
+    /* justify-content: center; */
+    /* width: 800px; */
+    padding: 30px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+.tipBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+.tips {
+    /* width: 70px; */
+    padding: 9px;
+    background-color: var(--Green900);
+    color: var(--Grey50);
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+/* .inputWrap {
+    position: relative;
+}
+.inputIcon {
+    position: absolute;
+} */
+.bill {
+    width: 200px;
+    text-align: right;
+    padding: 6px;
+    margin-top: 6px;
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 9% 45%;
+}
+
+.NumofPeople {
+    width: 200px;
+    text-align: right;
+    padding: 6px;
+    margin-top: 6px;
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 9% 45%;
+}
+.layer1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 12px; */
+    padding: 10px;
+}
+.left {
+    color: var(--Grey500);
+    font-size: 12px;
+}
+.left>input {
+    font-size: 20px;
+    background-color: var(--Grey50);
+    border: none;
+}
+
+.right {
+    background-color: var(--Green900);
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    right: 20px;
+    /* width: 300px; */
+    font-size: 12px;
+}
+.right>button {
+    margin-top: 90px;
+    margin-left: 9px;
+    width: 270px;
+    padding: 8px;
+    background-color: var(--Green400);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: var(--Green900);
+    font-weight: bold;
+    font-size: 12px;
+}
+.layer1>label {
+    color: var(--White);
+    margin-right: 15px;
+}
+.layer1>input {
+    width: 120px;
+    /* margin-left: 30px; */
+    padding: 10px 10px;
+    /* opacity: 0.1; */
+    color: var(--Green400);
+    text-align: right;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+}
+.layer1>input::placeholder {
+    color: var(--Green400);
+    font-size: 20px;
+}
+.tips:hover {
+    color: var(--Green900);
+    background-color: var(--Green400);
+}
+.tips:nth-child(6) {
+    color: var(--Green900);
+    width: 50px;
+    background-color: var(--Grey200);
+}
+.darkColor {
+    color: var(--Grey500);
+    font-size: 12px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
