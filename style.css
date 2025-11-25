@@ -221,6 +221,9 @@ input[type=number] {
         color: var(--Green900);
         font-weight: bold;
     }
+    #error {
+        font-size: 17px;
+    }
     .right{
         position: static;
         font-size: 20px;
