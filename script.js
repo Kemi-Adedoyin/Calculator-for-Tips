@@ -1,11 +1,12 @@
 
 let bill = document.getElementById("bill");
-
+let custom = document.getElementById("custom");
 let tip = document.querySelectorAll(".tips");
 let numOfPersons = document.getElementById("NumofPeople");
 let error = document.getElementById("error");
 let tipAmount = document.getElementById("tipAmount");
 let total = document.getElementById("total");
+let reset = document.getElementById("reset");
 let num = 0;
 
 // const tipNum = tip.value;
@@ -30,7 +31,10 @@ tip.forEach(tipInput => {
         display();
     })
 })
-
+custom.addEventListener("input", ()=>{
+    num = custom.value;
+    display();
+})
 
 function display() {
     const billNum = bill.value;
@@ -53,7 +57,18 @@ function display() {
     
 }
 
+reset.addEventListener("click", ()=> {
+    bill.value = "";
+    custom.value = "";
+    numOfPersons.value = "";
+    tipAmount.value="";
+    total.value = "";
 
+    error.textContent = "";
+    tip.forEach(tips =>{
+        tips.classList.remove("active");
+    })
+})
 
 
 // function calc() {
