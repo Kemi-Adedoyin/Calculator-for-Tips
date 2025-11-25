@@ -39,6 +39,7 @@ body {
 .tips {
     /* width: 70px; */
     padding: 9px;
+    font-family: "Lexend Deca";
     background-color: var(--Green900);
     color: var(--Grey50);
     border: none;
@@ -51,30 +52,40 @@ body {
 .inputIcon {
     position: absolute;
 } */
-.bill {
+#bill {
     width: 200px;
     text-align: right;
     padding: 6px;
+    font-family: "Lexend Deca";
     margin-top: 6px;
     background-image: url(images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 9% 45%;
 }
 
-.NumofPeople {
+#NumofPeople {
     width: 200px;
     text-align: right;
     padding: 6px;
     margin-top: 6px;
+    font-family: "Lexend Deca";
     background-image: url(images/icon-person.svg);
     background-repeat: no-repeat;
     background-position: 9% 45%;
+}
+.errorClass {
+    display: flex;
+    /* gap: 25px; */
+    justify-content: space-between;
+}
+#error {
+    color: rgb(207, 86, 86);
+    font-size: 10px;
 }
 .layer1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 12px; */
     padding: 10px;
 }
 .left {
@@ -98,6 +109,7 @@ body {
 }
 .right>button {
     margin-top: 90px;
+    font-family: "Lexend Deca";
     margin-left: 9px;
     width: 270px;
     padding: 8px;
@@ -115,6 +127,7 @@ body {
 }
 .layer1>input {
     width: 120px;
+    font-family: "Lexend Deca";
     /* margin-left: 30px; */
     padding: 10px 10px;
     /* opacity: 0.1; */
@@ -132,6 +145,10 @@ body {
     color: var(--Green900);
     background-color: var(--Green400);
 }
+.active {
+    color: var(--Green900);
+    background-color: var(--Green400);
+}
 .tips:nth-child(6) {
     color: var(--Green900);
     width: 50px;
@@ -143,14 +160,85 @@ body {
 }
 
 
-/* Chrome, Safari, Edge, Opera */
+/*I used this to remove the up and down arrows for input:number fields*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  /* margin: 0; */
 }
 
-/* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@media (max-width:50em) {
+    body {
+        margin: 0;
+    }
+    .logo{
+        height: 60px;
+        margin: 6% 40%;
+    }
+    .container {
+        display: block;
+        padding: 25px;
+        transform: none;
+        margin: 10px 0 0 0;
+        border-radius: 24px;
+        /* max-width: 340px; */
+        /* height: 100vh; */
+    }
+    .left{
+        font-size: 23px;
+        
+    }
+    #bill {
+        width: 90%;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bolder;
+        color: var(--Green900);
+    }
+    .tipBox {
+        grid-template-columns: repeat(2, 1fr);
+        /* margin: 14px 0 0 0; */
+        gap: 17px;
+        /* padding: 0 0 0 20px; */
+    }
+    .tipBox>button {
+        font-size: 24px;
+        padding: 10px;
+    }
+    .tips:nth-child(6) {
+        width: 155px;
+        font-size: 24px;
+        text-align: right;
+    }
+    
+    #NumofPeople {
+        width: 90%;
+        font-size: 25px;
+        padding: 20px;
+        color: var(--Green900);
+        font-weight: bold;
+    }
+    .right{
+        position: static;
+        font-size: 20px;
+        border-radius: 19px;
+        /* width: auto; */
+    }
+    .right>button {
+        margin-top: 10px;
+        margin-bottom: 7px;
+        width: 95%;
+        font-size: 20px;
+        padding: 12px;
+    }
+    .layer1>input {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .darkColor {
+    font-size: 18px;
+}
 }

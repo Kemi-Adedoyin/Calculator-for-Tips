@@ -15,27 +15,36 @@
   <div class="container">
     <div class="left">
       <label for="bill">Bill</label><br>
-      <input name="bill" type="number" placeholder="0" class="bill"><br><br>
+      <input name="bill" type="number" placeholder="0" id="bill"><br><br>
       <label for="tip">Select Tip %</label><br>
       <div class="tipBox">
-        <input type="button" class="tips" value="5%" name="tip">
+        <button class="tips" value="5" name="tip">5%</button>
+        <button class="tips" value="10" name="tip">10%</button>
+        <button class="tips" value="15" name="tip">15%</button>
+        <button class="tips" value="25" name="tip">25%</button>
+        <button class="tips" value="50" name="tip">50%</button>
+        <input type="number" class="tips" placeholder="Custom" name="tip">
+        <!-- <input type="button" class="tips" value="5%" name="tip">
       <input type="button" class="tips" value="10%" name="tip">
       <input type="button" class="tips" value="15%" name="tip">
       <input type="button" class="tips" value="25%" name="tip">
       <input type="button" class="tips" value="50%" name="tip">
-      <input type="number" class="tips" placeholder="Custom" name="tip">
+      <input type="number" class="tips" placeholder="Custom" name="tip"> -->
       </div><br><br>
-      <label for="NumofPeople">Number of People</label><br>
-      <input name="bill" type="number" placeholder="0" class="NumofPeople"><br>
+      <div class="errorClass">
+        <label for="NumofPeople">Number of People</label>
+        <span id="error"></span>
+      </div>
+      <input name="people" type="number" placeholder="0" id="NumofPeople" min="1"><br>
     </div>
     <div class="right">
       <div class="layer1">
         <label for="tip/person">Tip Amount <br><span class="darkColor">/ person</span></label>
-      <input type="number" name="tip/person" id="" placeholder="$0.00">
+      <input type="text" name="tip/person" id="tipAmount" placeholder="$0.00" min="1">
       </div>
       <div class="layer1">
         <label for="total/person">Total <br><span class="darkColor">/ person</span></label>
-      <input type="number" name="total/person" id="" placeholder="$0.00">
+      <input type="text" name="total/person" id="total" placeholder="$0.00">
     </div>
     <button type="reset">Reset</button>
   </div>
