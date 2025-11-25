@@ -43,6 +43,9 @@ function display() {
     
     if(people=="") {
         error.textContent="Can't be zero";
+        custom.value = "";
+        tipAmount.value="";
+        total.value = "";
     }
     else if (people > 0){
         error.textContent="";
