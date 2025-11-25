@@ -166,10 +166,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 @media (max-width:50em) {
     body {
         margin: 0;
